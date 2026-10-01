@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camphire &mdash; Fire in the Night</title>
+  <meta name="description" content="An animated campfire burning through the night. A little interactive scene built with HTML, CSS and JavaScript." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="scene" aria-label="Animated campfire night scene"></canvas>
+
+  <!-- Title / intro overlay -->
+  <div id="intro" class="overlay">
+    <h1 class="title">CAMPHIRE</h1>
+    <p class="subtitle">fire in the night</p>
+    <button id="startBtn" class="start-btn">Enter the Wild</button>
+    <p class="hint">Click the fire to stoke it &middot; move your mouse to look around</p>
+  </div>
+
+  <!-- Game-style HUD -->
+  <header id="hud" class="hud hidden">
+    <div class="hud-left">
+      <span class="badge">&#128293; Campfire</span>
+    </div>
+    <div class="hud-right">
+      <div class="meter">
+        <span class="meter-label">Warmth</span>
+        <div class="meter-track"><div id="warmthFill" class="meter-fill"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bottom controls -->
+  <footer id="controls" class="controls hidden">
+    <button id="woodBtn" class="ctrl-btn">+ Add Wood</button>
+    <button id="windBtn" class="ctrl-btn">Wind: Calm</button>
+    <button id="soundBtn" class="ctrl-btn">Sound: Off</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
